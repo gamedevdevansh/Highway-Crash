@@ -49,25 +49,6 @@ public class CarController : MonoBehaviour
         uiManager = manager;    
     }
 
-    //public void GasPressed()
-    //{
-    //    GasInput = 1;
-    //}
-    //public void GasReleased()
-    //{
-    //    GasInput = 0;
-    //}
-
-    //public void BrakePressed()
-    //{
-    //    BrakeInput = 1;
-    //}
-    //public void BrakeReleased()
-    //{
-    //    BrakeInput = 0;
-    //}
-
-
     public void GasPressed()
     {
         GasInput = true;
@@ -95,21 +76,7 @@ public class CarController : MonoBehaviour
         Steering();
         ApplyingBrakes();
         PowerSteering();
-        //Debug.Log(CarSpeed());
     }
-
-    //void GetInput()
-    //{
-    //    //verticalInput = Input.GetAxis("Vertical");
-    //    //verticalInput = GasInput ? 1f : 0f;
-    //    if (GasInput)
-    //        verticalInput = 1f;
-    //    else
-    //        verticalInput = Input.GetAxis("Vertical");
-
-    //    horizontalInput = SimpleInput.GetAxis("Horizontal");
-    //    //horizontalInput = Input.GetAxis("Horizontal");
-    //}
     void GetInput()
     {
         // If touch is pressed, force verticalInput to 1.
@@ -133,11 +100,6 @@ public class CarController : MonoBehaviour
     }
     void MotorForce()
     {
-        //frontRightWheelCollider.motorTorque = torque * Input.GetAxis("Vertical");
-        //frontLeftWheelCollider.motorTorque = torque * Input.GetAxis("Vertical");
-        //rearRightWheelCollider.motorTorque = torque * Input.GetAxis("Vertical");
-        //rearLeftWheelCollider.motorTorque = torque * Input.GetAxis("Vertical");
-
         float applied = torque * verticalInput;
         frontRightWheelCollider.motorTorque = applied;
         frontLeftWheelCollider.motorTorque = applied;
@@ -197,39 +159,6 @@ public class CarController : MonoBehaviour
             rearLeftWheelCollider.brakeTorque = 0f;
             _rigidbody.drag = 0.1f;
         }
-
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    frontRightWheelCollider.brakeTorque = brakeForce;
-        //    frontLeftWheelCollider.brakeTorque = brakeForce;
-        //    rearRightWheelCollider.brakeTorque = brakeForce;
-        //    rearLeftWheelCollider.brakeTorque = brakeForce;
-        //    GetComponent<Rigidbody>().drag = 1f;
-        //}
-        //else
-        //{
-        //    frontRightWheelCollider.brakeTorque = 0f;
-        //    frontLeftWheelCollider.brakeTorque = 0f;
-        //    rearRightWheelCollider.brakeTorque = 0f;
-        //    rearLeftWheelCollider.brakeTorque = 0f;
-        //    GetComponent<Rigidbody>().drag = 0.1f;
-        //}
-        //if (BrakeInput != 0)
-        //{
-        //    frontRightWheelCollider.brakeTorque = brakeForce;
-        //    frontLeftWheelCollider.brakeTorque = brakeForce;
-        //    rearRightWheelCollider.brakeTorque = brakeForce;
-        //    rearLeftWheelCollider.brakeTorque = brakeForce;
-        //    GetComponent<Rigidbody>().drag = 1f;
-        //}
-        //else
-        //{
-        //    frontRightWheelCollider.brakeTorque = 0f;
-        //    frontLeftWheelCollider.brakeTorque = 0f;
-        //    rearRightWheelCollider.brakeTorque = 0f;
-        //    rearLeftWheelCollider.brakeTorque = 0f;
-        //    GetComponent<Rigidbody>().drag = 0.1f;
-        //}
     }
 
     public float CarSpeed()
