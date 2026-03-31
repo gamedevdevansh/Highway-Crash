@@ -6,11 +6,6 @@ public class LaneMovement : MonoBehaviour
 {
     [SerializeField] Transform playerCarTransform;
     [SerializeField] float offset = -5;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public void SetTransform(Transform transform)
     {

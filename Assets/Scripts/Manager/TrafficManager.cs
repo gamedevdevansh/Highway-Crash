@@ -51,41 +51,6 @@ public class TrafficManager : MonoBehaviour
         }
     }
 
-    //void SpawnTrafficVehicle()
-    //{
-    //    bool spawnOpposite = Random.value > 0.5f;
-    //    Transform[] spawnLanes = spawnOpposite ? oppositeLanes : forwardLanes;
-
-    //    if (spawnLanes.Length == 0) return;
-
-    //    // 1. Pick a random lane
-    //    int randomLaneIndex = Random.Range(0, spawnLanes.Length);
-    //    Transform chosenLane = spawnLanes[randomLaneIndex];
-
-    //    // 2. Get vehicle from pool
-    //    GameObject vehicle = trafficPool.GetVehicle();
-    //    if (vehicle == null) return;
-
-    //    // 3. THE LEAPFROG FIX: Calculate a safe spawn position based on the PLAYER, not the road
-    //    Vector3 safeSpawnPosition = new Vector3(
-    //        chosenLane.position.x, // Use lane's left/right position
-    //        chosenLane.position.y, // Use lane's height
-    //        carController.transform.position.z + spawnDistanceAhead // Always spawn exactly this far ahead of player
-    //    );
-
-    //    // 4. Position and activate
-    //    vehicle.transform.position = safeSpawnPosition;
-    //    vehicle.transform.rotation = chosenLane.rotation;
-    //    vehicle.SetActive(true);
-
-    //    // 5. Setup AI
-    //    TrafficVehicleAI ai = vehicle.GetComponent<TrafficVehicleAI>();
-    //    if (ai != null)
-    //    {
-    //        ai.SetDirection(spawnOpposite ? -1 : 1);
-    //    }
-    //}
-
     void SpawnTrafficVehicle()
     {
         bool spawnOpposite = Random.value > 0.5f;
@@ -133,37 +98,4 @@ public class TrafficManager : MonoBehaviour
             ai.SetDirection(1);
         }
     }
-
-    //void SpawnTrafficVehicle()
-    //{
-    //    if (EndlessCity.currentTile == null) return;
-
-    //    RoadLanes lanes = EndlessCity.currentTile.GetComponent<RoadLanes>();
-    //    if (lanes == null) return;
-
-    //    bool spawnOpposite = Random.value > 0.5f;
-
-    //    Transform[] selectedLanes = spawnOpposite
-    //        ? lanes.oppositeLanes
-    //        : lanes.forwardLanes;
-
-    //    int laneIndex = Random.Range(0, selectedLanes.Length);
-    //    Transform lane = selectedLanes[laneIndex];
-
-    //    GameObject vehicle = trafficPool.GetVehicle();
-
-    //    Vector3 spawnPos = lane.position;
-    //    spawnPos.y += 0.5f;
-
-    //    vehicle.transform.position = spawnPos;
-    //    vehicle.transform.rotation = lane.rotation;
-    //    vehicle.SetActive(true);
-
-    //    TrafficVehicleAI ai = vehicle.GetComponent<TrafficVehicleAI>();
-
-    //    if (ai != null)
-    //    {
-    //        ai.SetDirection(spawnOpposite ? -1 : 1);
-    //    }
-    //}
 }
