@@ -9708,8 +9708,8 @@ Transform:
   m_GameObject: {fileID: 667913963}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.4, z: 0}
-  m_LocalScale: {x: 1000, y: 1, z: 1000}
+  m_LocalPosition: {x: 2, y: 0.64, z: -5.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -13089,7 +13089,7 @@ Transform:
   m_GameObject: {fileID: 878822061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0755744, y: -0.1398646, z: -12.066503}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20925,7 +20925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1330333583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23194,22 +23194,11 @@ MonoBehaviour:
   oppositeLanes:
   - {fileID: 778942518}
   - {fileID: 488312050}
-  TrafficVehicle:
-  - {fileID: 4025118718094579674, guid: a270e2e835c643642ae123b4494bc9a6, type: 3}
-  - {fileID: 8997278503777994064, guid: b96a0439e2751ab4f9a7ced423ad936e, type: 3}
-  - {fileID: 6847200013607466969, guid: 42a76462206c6224da533b9165d9c29f, type: 3}
-  - {fileID: 220212147129607325, guid: 907605c450557534c9e920938a7e4a5d, type: 3}
-  - {fileID: 7823534493429138116, guid: 0dc403881eaf84e458082671da8e7836, type: 3}
-  - {fileID: 392986997744469285, guid: ece6b28ba63546f4fa92be41de898897, type: 3}
-  - {fileID: 5386836873697355019, guid: 652f93fad3dcdc548b424fcab3fcadb3, type: 3}
-  - {fileID: 7160659462701513006, guid: a1f26ad70bb01ee4ebde06367bae75cc, type: 3}
-  - {fileID: 640575137916776079, guid: da7abb325c3b1614e9f84d836f5e4adb, type: 3}
-  - {fileID: 7552049370034813947, guid: e637ea5d21192a448b3fa26c834ea9e0, type: 3}
-  - {fileID: 8097316451885757754, guid: 1b258c0732716df4f960eb668b7eaa00, type: 3}
-  carController: {fileID: 0}
-  minSpawnTime: 60
-  maxSpawnTime: 120
+  minSpawnTime: 5
+  maxSpawnTime: 10
+  spawnRadius: 2
   trafficPool: {fileID: 878822062}
+  playerCar: {fileID: 0}
 --- !u!1 &1504801272
 GameObject:
   m_ObjectHideFlags: 0
@@ -28042,11 +28031,11 @@ MonoBehaviour:
   - {fileID: 5191645534699482077, guid: 727425db8b527924680363c61247ca5f, type: 3}
   cameraMovement: {fileID: 963194230}
   uiManager: {fileID: 1490574042}
+  laneMovement: {fileID: 410883714}
+  trafficManager: {fileID: 1492377155}
   cityArray:
   - {fileID: 1322721939}
   - {fileID: 1928923773}
-  laneMovement: {fileID: 410883714}
-  trafficManager: {fileID: 1492377155}
 --- !u!4 &1771291568
 Transform:
   m_ObjectHideFlags: 0
