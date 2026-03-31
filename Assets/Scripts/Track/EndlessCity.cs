@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,11 +7,6 @@ public class EndlessCity : MonoBehaviour
     [SerializeField] Transform playerCarTransform;
     [SerializeField] Transform nextCityTransform;
     [SerializeField] float halfLength = 80f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
     public void SetTransform(Transform transform)
     {
         playerCarTransform = transform;
