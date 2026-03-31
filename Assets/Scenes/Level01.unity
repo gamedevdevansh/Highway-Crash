@@ -23194,11 +23194,12 @@ MonoBehaviour:
   oppositeLanes:
   - {fileID: 778942518}
   - {fileID: 488312050}
+  TrafficVehicle: []
+  carController: {fileID: 0}
   minSpawnTime: 5
   maxSpawnTime: 10
-  spawnRadius: 2
   trafficPool: {fileID: 878822062}
-  playerCar: {fileID: 0}
+  laneCooldown: 1
 --- !u!1 &1504801272
 GameObject:
   m_ObjectHideFlags: 0
@@ -28031,11 +28032,11 @@ MonoBehaviour:
   - {fileID: 5191645534699482077, guid: 727425db8b527924680363c61247ca5f, type: 3}
   cameraMovement: {fileID: 963194230}
   uiManager: {fileID: 1490574042}
-  laneMovement: {fileID: 410883714}
-  trafficManager: {fileID: 1492377155}
   cityArray:
   - {fileID: 1322721939}
   - {fileID: 1928923773}
+  laneMovement: {fileID: 410883714}
+  trafficManager: {fileID: 1492377155}
 --- !u!4 &1771291568
 Transform:
   m_ObjectHideFlags: 0

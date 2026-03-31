@@ -35,7 +35,8 @@ public class TrafficManager : MonoBehaviour
             if (carController.CarSpeed() > 20f)
             {
                 //dynamicTimer = Random.Range(minSpawnTime, maxSpawnTime) / carController.CarSpeed();
-                dynamicTimer = Mathf.Lerp(2f, 0.5f, carController.CarSpeed() / 100f);
+                //dynamicTimer = Mathf.Lerp(2f, 0.5f, carController.CarSpeed() / 100f);
+                dynamicTimer = Mathf.Lerp(maxSpawnTime, minSpawnTime, carController.CarSpeed() / 100f);
                 SpawnTrafficVehicle();
             }
             else
@@ -88,6 +89,9 @@ public class TrafficManager : MonoBehaviour
                 return;
         }
 
+        // 🚫 Overlap check
+        if (Physics.CheckSphere(lane.position, 2f))
+            return;
         // ✅ Update last spawn time
         laneLastSpawnTime[lane] = Time.time;
 
@@ -101,7 +105,11 @@ public class TrafficManager : MonoBehaviour
 
         GameObject vehicle = trafficPool.GetVehicle();
 
-        vehicle.transform.position = lane.position;
+        Vector3 spawnPos = lane.position;
+        spawnPos.y += 0.5f;
+
+        //vehicle.transform.position = lane.position;
+        vehicle.transform.position = spawnPos;
         vehicle.transform.rotation = lane.rotation;
         vehicle.SetActive(true);
 
