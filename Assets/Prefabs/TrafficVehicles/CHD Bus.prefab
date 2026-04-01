@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 3113985568437159027}
   - component: {fileID: 2318474023141283335}
   - component: {fileID: 657930405005327676}
+  - component: {fileID: 8478621327792189486}
   m_Layer: 0
   m_Name: CHD Bus
   m_TagString: TrafficVehicle
@@ -514,9 +515,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8997278503777994064}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a491df2eba35dfc4cbe24f82b55edc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &8478621327792189486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997278503777994064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79372db4d5555394fa98e3a2eed08b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minSpeed: 8
+  maxSpeed: 15

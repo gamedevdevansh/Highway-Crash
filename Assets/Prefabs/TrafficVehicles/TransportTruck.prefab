@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4282753856416155492}
   - component: {fileID: 1645527562161459034}
   - component: {fileID: 3656689877303339141}
+  - component: {fileID: 15641630117017902}
   m_Layer: 0
   m_Name: TransportTruck
   m_TagString: TrafficVehicle
@@ -161,12 +162,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640575137916776079}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a491df2eba35dfc4cbe24f82b55edc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &15641630117017902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640575137916776079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79372db4d5555394fa98e3a2eed08b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minSpeed: 8
+  maxSpeed: 15
 --- !u!1 &3554822054245159885
 GameObject:
   m_ObjectHideFlags: 0

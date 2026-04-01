@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 211165844131157991}
   - component: {fileID: 1365486064060974319}
   - component: {fileID: 4698682768116197883}
+  - component: {fileID: 2494434571369737417}
   m_Layer: 0
   m_Name: Pick-up Truck
   m_TagString: TrafficVehicle
@@ -430,12 +431,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7823534493429138116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a491df2eba35dfc4cbe24f82b55edc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &2494434571369737417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823534493429138116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79372db4d5555394fa98e3a2eed08b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minSpeed: 8
+  maxSpeed: 15
 --- !u!1 &9188907029504796486
 GameObject:
   m_ObjectHideFlags: 0

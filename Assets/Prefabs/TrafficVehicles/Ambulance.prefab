@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 1001714040428957148}
   - component: {fileID: 2125762248645611181}
   - component: {fileID: 2361217104419120987}
+  - component: {fileID: -7822817511911026338}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: TrafficVehicle
@@ -347,12 +348,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4025118718094579674}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a491df2eba35dfc4cbe24f82b55edc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &-7822817511911026338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025118718094579674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79372db4d5555394fa98e3a2eed08b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  minSpeed: 8
+  maxSpeed: 15
 --- !u!1 &6414871858042254859
 GameObject:
   m_ObjectHideFlags: 0
