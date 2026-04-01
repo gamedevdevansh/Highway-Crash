@@ -41,7 +41,7 @@ public class TrafficPool : MonoBehaviour
         }
 
         // Expand pool if all cars are currently on the road
-        return CreateNewVehicleAndAddToPool(false);
+        return CreateNewVehicleAndAddToPool(true);
     }
 
     // Helper method to keep code clean

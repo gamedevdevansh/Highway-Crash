@@ -74,7 +74,14 @@ public class TrafficManager : MonoBehaviour
         if (vehicle == null) return; // Safety check if pool is empty
 
         // Set Position
-        vehicle.transform.position = lane.position;
+        //vehicle.transform.position = lane.position;
+
+        float spawnDistance = 120f;
+
+        Vector3 spawnPos = lane.position;
+        spawnPos.z = carController.transform.position.z + spawnDistance;
+
+        vehicle.transform.position = spawnPos;
 
         // 👇 THE FIX: Force the correct rotation here
         if (spawnOpposite)

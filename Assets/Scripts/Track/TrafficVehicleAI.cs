@@ -8,13 +8,14 @@ public class TrafficVehicleAI : MonoBehaviour
     private float currentSpeed;
 
     [Header("Despawn Settings")]
-    [SerializeField] float despawnDistance = 40f; // Distance behind player to despawn
+    [SerializeField] float despawnDistanceBehind = 40f;
+    [SerializeField] float despawnDistanceAhead = 200f; // Prevent fast cars from driving to infinity
+
     private Transform playerTransform;
     private Rigidbody rb;
 
     void Awake()
     {
-        // Cache the Rigidbody once so we don't use GetComponent multiple times
         rb = GetComponent<Rigidbody>();
     }
 
@@ -22,14 +23,12 @@ public class TrafficVehicleAI : MonoBehaviour
     {
         currentSpeed = Random.Range(minSpeed, maxSpeed);
 
-        // Reset physics so it doesn't fly off when spawned
         if (rb != null)
         {
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
 
-        // Find the player every time it spawns to ensure we have the reference
         if (playerTransform == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -50,18 +49,28 @@ public class TrafficVehicleAI : MonoBehaviour
         // Move the car
         transform.Translate(Vector3.forward * direction * currentSpeed * Time.deltaTime);
 
-        // RELIABLE DESPAWN: Check distance behind the player
+        // 👇 ENDLESS SYSTEM FIX: If the road chunk teleports and the car falls, recycle it instantly.
+        if (transform.position.y < -5f)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
+        // 👇 RELIABLE DESPAWN: Check both ahead and behind
         if (playerTransform != null)
         {
-            // If the car's Z is less than the player's Z minus the despawn distance
-            if (transform.position.z < playerTransform.position.z - despawnDistance)
+            // Calculate distance relative to player
+            float zDifference = transform.position.z - playerTransform.position.z;
+
+            // If car is too far behind OR too far ahead
+            if (zDifference < -despawnDistanceBehind || zDifference > despawnDistanceAhead)
             {
                 gameObject.SetActive(false); // Return to pool!
             }
         }
         else
         {
-            // Failsafe: If player gets destroyed, just despawn at a fixed negative Z
+            // Failsafe
             if (transform.position.z < -100f)
             {
                 gameObject.SetActive(false);
