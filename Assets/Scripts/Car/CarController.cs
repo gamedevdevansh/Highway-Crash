@@ -259,6 +259,11 @@ public class CarController : MonoBehaviour
         }
     }
 
+    public bool IsMagnetActive()
+    {
+        return isMagnetActive;
+    }
+
     IEnumerator MagnetCoroutine()
     {
         isMagnetActive = true;
