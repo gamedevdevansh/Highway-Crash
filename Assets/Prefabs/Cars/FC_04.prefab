@@ -11748,7 +11748,7 @@ GameObject:
   - component: {fileID: -5401546021308430326}
   m_Layer: 0
   m_Name: FC_04
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12060,6 +12060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828ddbfcd7a668a428a07da9c731d298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostMultiplier: 2
+  boostDuration: 3
   frontRightWheelCollider: {fileID: 5527642413901582773}
   frontLeftWheelCollider: {fileID: 5260668579089014070}
   rearRightWheelCollider: {fileID: 2340269782297036477}

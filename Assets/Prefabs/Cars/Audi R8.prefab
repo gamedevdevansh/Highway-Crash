@@ -9222,7 +9222,7 @@ GameObject:
   - component: {fileID: 352644410548717555}
   m_Layer: 0
   m_Name: Audi R8
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9287,6 +9287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828ddbfcd7a668a428a07da9c731d298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostMultiplier: 2
+  boostDuration: 3
   frontRightWheelCollider: {fileID: 1011468127405956485}
   frontLeftWheelCollider: {fileID: 7522824298992600470}
   rearRightWheelCollider: {fileID: 4348101128757493634}

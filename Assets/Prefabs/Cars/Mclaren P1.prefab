@@ -4255,7 +4255,7 @@ GameObject:
   - component: {fileID: -6088891696236519270}
   m_Layer: 0
   m_Name: Mclaren P1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4329,6 +4329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828ddbfcd7a668a428a07da9c731d298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostMultiplier: 2
+  boostDuration: 3
   frontRightWheelCollider: {fileID: 1436149381125301260}
   frontLeftWheelCollider: {fileID: 7299551045675676638}
   rearRightWheelCollider: {fileID: 8477933962080580531}

@@ -3704,7 +3704,7 @@ GameObject:
   - component: {fileID: -5785561774360605102}
   m_Layer: 0
   m_Name: BMW 1M
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3805,6 +3805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828ddbfcd7a668a428a07da9c731d298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boostMultiplier: 2
+  boostDuration: 3
   frontRightWheelCollider: {fileID: 1177458757356592728}
   frontLeftWheelCollider: {fileID: 3527718659357929365}
   rearRightWheelCollider: {fileID: 8641348213334131525}

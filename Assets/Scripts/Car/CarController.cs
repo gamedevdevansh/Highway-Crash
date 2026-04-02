@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
+    // POWER UPS
+    private bool isSpeedBoostActive = false;
+    private bool isShieldActive = false;
+    private bool isMagnetActive = false;
+
+    [SerializeField] float boostMultiplier = 5f;
+    [SerializeField] float boostDuration = 3f;
+
+    private float originalTorque;
     public WheelCollider frontRightWheelCollider;
     public WheelCollider frontLeftWheelCollider;
     public WheelCollider rearRightWheelCollider;
@@ -31,6 +40,7 @@ public class CarController : MonoBehaviour
     public bool GasInput;
     public bool BrakeInput;
 
+    float originalDrag;
 
     [SerializeField] UIManager uiManager;
 
@@ -42,6 +52,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         _rigidbody.centerOfMass = carCentreOfMassTransform.localPosition;
+        originalTorque = torque;
         //_rigidbody.centerOfMass = new Vector3(0, -0.5f, 0);
     }
     public void SetUiManager(UIManager manager)
@@ -167,11 +178,95 @@ public class CarController : MonoBehaviour
         return speed;
     }
 
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "TrafficVehicle")
+    //    {
+    //        uiManager.GameOver();
+    //    }
+    //}
+
+    public void BoostSpeed()
+    {
+        if (!isSpeedBoostActive)
+        {
+            StartCoroutine(SpeedBoostCoroutine());
+        }
+    }
+
+    //IEnumerator SpeedBoostCoroutine()
+    //{
+    //    isSpeedBoostActive = true;
+
+    //    torque *= boostMultiplier;
+
+    //    Debug.Log("SpeedBoost Activated");
+    //    yield return new WaitForSeconds(boostDuration);
+
+    //    torque = originalTorque;
+
+    //    isSpeedBoostActive = false;
+    //}
+
+    IEnumerator SpeedBoostCoroutine()
+    {
+        isSpeedBoostActive = true;
+
+        torque *= boostMultiplier;
+
+
+        originalDrag = _rigidbody.drag;
+        _rigidbody.drag = 0.05f; // less resistance
+
+
+        // 🚀 FORCE SPEED BOOST
+        _rigidbody.velocity *= 1.5f;
+
+        Debug.Log("SpeedBoost Activated");
+
+        yield return new WaitForSeconds(boostDuration);
+
+        torque = originalTorque;
+
+        isSpeedBoostActive = false;
+    }
+
+    public void ActivateShield()
+    {
+        isShieldActive = true;
+
+        Debug.Log("Shield Activated");
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "TrafficVehicle")
         {
+            if (isShieldActive)
+            {
+                isShieldActive = false;
+                Debug.Log("Shield Used!");
+                return;
+            }
+
             uiManager.GameOver();
         }
+    }
+    public void ActivateMagnet()
+    {
+        if (!isMagnetActive)
+        {
+            StartCoroutine(MagnetCoroutine());
+        }
+    }
+
+    IEnumerator MagnetCoroutine()
+    {
+        isMagnetActive = true;
+
+        Debug.Log("Magnet Activated");
+
+        yield return new WaitForSeconds(5f);
+
+        isMagnetActive = false;
     }
 }

@@ -10,6 +10,8 @@ public class CarSpwaner : MonoBehaviour
     [SerializeField] EndlessCity[] cityArray;
     [SerializeField] LaneMovement laneMovement;
     [SerializeField] TrafficManager trafficManager;
+    [SerializeField] PowerUpSpawner powerUpSpawner;
+
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class CarSpwaner : MonoBehaviour
         cityArray[1].SetTransform(carController.transform);
         trafficManager.SetCarController(carController);
         laneMovement.SetTransform(carController.transform);
+        powerUpSpawner.SetCarController(carController);
+
 
     }
 }
