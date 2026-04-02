@@ -33,5 +33,6 @@ public class CoinPool : MonoBehaviour
         }
 
         return CreateNew(); // expand pool
+        Debug.Log("CoinPool");
     }
 }

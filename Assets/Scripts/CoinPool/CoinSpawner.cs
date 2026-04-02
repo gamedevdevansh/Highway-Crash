@@ -11,7 +11,6 @@ public class CoinSpawner : MonoBehaviour
 
     float timer;
 
-
     public void SetCarController(CarController controller)
     {
         carController = controller;
@@ -48,5 +47,6 @@ public class CoinSpawner : MonoBehaviour
 
             coin.SetActive(true);
         }
+        Debug.Log("CoinSpawner");
     }
 }
