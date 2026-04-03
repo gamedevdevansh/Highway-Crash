@@ -11,7 +11,6 @@ public class Coin : MonoBehaviour
     void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-
         if (playerObj != null)
         {
             player = playerObj.transform;
@@ -25,16 +24,6 @@ public class Coin : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
 
-        // 🧲 Magnet logic
-        //if (carController.IsMagnetActive() && distance < magnetRange)
-        //{
-        //    transform.position = Vector3.MoveTowards(
-        //        transform.position,
-        //        player.position,
-        //        moveSpeed * Time.deltaTime
-        //    );
-        //}
-
         // 🧲 MAGNET EFFECT
         if (carController.IsMagnetActive() && distance < magnetRange)
         {
@@ -42,8 +31,6 @@ public class Coin : MonoBehaviour
 
             transform.position += direction * moveSpeed * Time.deltaTime;
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)

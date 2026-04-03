@@ -31,8 +31,6 @@ public class CoinPool : MonoBehaviour
             if (!obj.activeInHierarchy)
                 return obj;
         }
-
         return CreateNew(); // expand pool
-        Debug.Log("CoinPool");
     }
 }

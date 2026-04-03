@@ -11,6 +11,7 @@ public class CarSpwaner : MonoBehaviour
     [SerializeField] LaneMovement laneMovement;
     [SerializeField] TrafficManager trafficManager;
     [SerializeField] PowerUpSpawner powerUpSpawner;
+    [SerializeField] CoinSpawner coinSpawner;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class CarSpwaner : MonoBehaviour
         trafficManager.SetCarController(carController);
         laneMovement.SetTransform(carController.transform);
         powerUpSpawner.SetCarController(carController);
+        coinSpawner.SetCarController(carController);
 
 
     }
