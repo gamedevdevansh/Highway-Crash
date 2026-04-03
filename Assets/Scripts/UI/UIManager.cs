@@ -45,6 +45,8 @@ public class UIManager : MonoBehaviour
         gas.SetActive(true);
         brake.SetActive(true);
         steering.SetActive(true);
+        coinText.gameObject.SetActive(true);
+        powerUpText.gameObject.SetActive(true);
     }
 
     public void SetCarController(CarController controller)
@@ -59,6 +61,26 @@ public class UIManager : MonoBehaviour
         DistanceUI();
         ScoreUI();
         MaximumSpeed(); 
+    }
+
+    public void ShowPowerUp(string name, float duration)
+    {
+        StopCoroutine("PowerUpTimer");
+        StartCoroutine(PowerUpTimer(name, duration));
+    }
+
+    IEnumerator PowerUpTimer(string name, float duration)
+    {
+        float time = duration;
+
+        while (time > 0)
+        {
+            powerUpText.text = name + ": " + Mathf.Ceil(time) + "s";
+            time -= Time.deltaTime;
+            yield return null;
+        }
+
+        powerUpText.text = "";
     }
     public void AddCoin(int amount)
     {
@@ -92,7 +114,8 @@ public class UIManager : MonoBehaviour
         steering.SetActive(false);
         totalScoreText.text = score.ToString("0");
         totalDistanceText.text = distance.ToString("0.00" + "Km");
-
+        coinText.gameObject.SetActive(false);
+        powerUpText.gameObject.SetActive(false);
     }
     void MaximumSpeed()
     {

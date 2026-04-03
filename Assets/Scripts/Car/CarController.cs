@@ -229,13 +229,15 @@ public class CarController : MonoBehaviour
         torque = originalTorque;
 
         isSpeedBoostActive = false;
+
+        uiManager.ShowPowerUp("Speed", boostDuration);
     }
 
     public void ActivateShield()
     {
         isShieldActive = true;
-
         Debug.Log("Shield Activated");
+        uiManager.ShowPowerUp("Shield", 5f);
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -273,5 +275,6 @@ public class CarController : MonoBehaviour
         yield return new WaitForSeconds(5f);
 
         isMagnetActive = false;
+        uiManager.ShowPowerUp("Magnet", 5f);
     }
 }

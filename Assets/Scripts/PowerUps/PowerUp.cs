@@ -16,6 +16,7 @@ public class PowerUp : MonoBehaviour
         {
             case Type.Speed:
                 car.BoostSpeed();
+
                 break;
 
             case Type.Shield:
