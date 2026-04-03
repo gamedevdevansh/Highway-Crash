@@ -26,6 +26,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject brake;
     [SerializeField] GameObject steering;
 
+    [SerializeField] TextMeshProUGUI coinText;
+    [SerializeField] TextMeshProUGUI powerUpText;
+    private int coinCount = 0;
     private float speed = 1f;
     private float distance = 1f;
     private float score = 1f;
@@ -56,6 +59,11 @@ public class UIManager : MonoBehaviour
         DistanceUI();
         ScoreUI();
         MaximumSpeed(); 
+    }
+    public void AddCoin(int amount)
+    {
+        coinCount += amount;
+        coinText.text = "Coins: " + coinCount;
     }
     void SpeedUI()
     {

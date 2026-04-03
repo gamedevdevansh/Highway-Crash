@@ -7,9 +7,11 @@ public class Coin : MonoBehaviour
 
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float magnetRange = 10f;
+    private UIManager uiManager;
 
     void Start()
     {
+        uiManager = FindObjectOfType<UIManager>();
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
@@ -35,6 +37,7 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        uiManager.AddCoin(1);
         if (!other.CompareTag("Player")) return;
 
         Debug.Log("Coin Collected");
