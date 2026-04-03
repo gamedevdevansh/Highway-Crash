@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class Coin : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Coin : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float magnetRange = 10f;
     private UIManager uiManager;
+    private bool isCollected = false;
 
     void Start()
     {
@@ -37,10 +39,15 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        uiManager.AddCoin(1);
+        if (isCollected) return;
+
         if (!other.CompareTag("Player")) return;
 
         Debug.Log("Coin Collected");
+
+        isCollected = true;
+        
+        uiManager.AddCoin(1);
 
         gameObject.SetActive(false); // pooling friendly
     }

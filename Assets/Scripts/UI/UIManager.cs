@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
     public void AddCoin(int amount)
     {
         coinCount += amount;
-        coinText.text = "Coins: " + coinCount;
+        coinText.text = coinCount.ToString();
     }
     void SpeedUI()
     {
