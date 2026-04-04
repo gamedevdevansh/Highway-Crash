@@ -12075,9 +12075,10 @@ MonoBehaviour:
   torque: 750
   brakeForce: 1300
   steeringAngle: 20
-  GasInput: 1
-  BrakeInput: 1
+  GasInput: 0
+  BrakeInput: 0
   uiManager: {fileID: 0}
+  highSpeedSteerMultiplier: 0.5
 --- !u!54 &4916113621885200794
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12088,7 +12089,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 2000
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -12102,9 +12103,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &5174310839207948387
 AudioSource:
   m_ObjectHideFlags: 0

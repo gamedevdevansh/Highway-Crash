@@ -9887,8 +9887,8 @@ MonoBehaviour:
   - {fileID: 488312050}
   coinPool: {fileID: 1386479313}
   carController: {fileID: 0}
-  spawnDistance: 150
-  spawnInterval: 3
+  spawnDistance: 200
+  spawnInterval: 5
 --- !u!1 &694023512
 GameObject:
   m_ObjectHideFlags: 0
@@ -14459,9 +14459,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCarTransform: {fileID: 0}
   carController: {fileID: 0}
-  minOffset: -5
-  maxOffset: -12
-  smoothSpeed: 5
+  smoothSpeed: 50
+  baseOffset: {x: 0, y: 4, z: -7.5}
+  minDistance: 3
+  maxDistance: 10
+  tiltAngle: 5
 --- !u!1 &964963237
 GameObject:
   m_ObjectHideFlags: 0
@@ -14665,8 +14667,8 @@ MonoBehaviour:
   - {fileID: 488312050}
   powerUpPool: {fileID: 1949774866}
   carController: {fileID: 0}
-  spawnDistance: 120
-  spawnInterval: 5
+  spawnDistance: 200
+  spawnInterval: 10
 --- !u!4 &968837888
 Transform:
   m_ObjectHideFlags: 0

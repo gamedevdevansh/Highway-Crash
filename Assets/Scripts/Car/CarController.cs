@@ -44,6 +44,8 @@ public class CarController : MonoBehaviour
 
     [SerializeField] UIManager uiManager;
 
+    [SerializeField] float highSpeedSteerMultiplier = 0.5f;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -86,7 +88,7 @@ public class CarController : MonoBehaviour
         GetInput();
         Steering();
         ApplyingBrakes();
-        PowerSteering();
+        //PowerSteering();
     }
     void GetInput()
     {
@@ -118,19 +120,30 @@ public class CarController : MonoBehaviour
         rearLeftWheelCollider.motorTorque = applied;
     }
 
+    //void Steering()
+    //{
+    //    frontRightWheelCollider.steerAngle = steeringAngle * horizontalInput;
+    //    frontLeftWheelCollider.steerAngle = steeringAngle * horizontalInput;
+    //}
+
     void Steering()
     {
-        frontRightWheelCollider.steerAngle = steeringAngle * horizontalInput;
-        frontLeftWheelCollider.steerAngle = steeringAngle * horizontalInput;
+        float speedFactor = Mathf.InverseLerp(0f, 100f, _rigidbody.velocity.magnitude * 2.236f);
+        float steerReduce = Mathf.Lerp(1f, highSpeedSteerMultiplier, speedFactor);
+
+        float steer = steeringAngle * steerReduce * horizontalInput;
+
+        frontRightWheelCollider.steerAngle = steer;
+        frontLeftWheelCollider.steerAngle = steer;
     }
 
-    void PowerSteering()
-    {
-        if (horizontalInput == 0)
-        {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 10f), Time.deltaTime);
-        }
-    }
+    //void PowerSteering()
+    //{
+    //    if (horizontalInput == 0)
+    //    {
+    //        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 10f), Time.deltaTime);
+    //    }
+    //}
 
 
     void UpdateWheels()
@@ -160,7 +173,7 @@ public class CarController : MonoBehaviour
             frontLeftWheelCollider.brakeTorque = brakeForce;
             rearRightWheelCollider.brakeTorque = brakeForce;
             rearLeftWheelCollider.brakeTorque = brakeForce;
-            _rigidbody.drag = 1f;
+            _rigidbody.drag = .5f;
         }
         else
         {
@@ -168,14 +181,30 @@ public class CarController : MonoBehaviour
             frontLeftWheelCollider.brakeTorque = 0f;
             rearRightWheelCollider.brakeTorque = 0f;
             rearLeftWheelCollider.brakeTorque = 0f;
-            _rigidbody.drag = 0.1f;
+            _rigidbody.drag = 0.02f;
         }
     }
 
+    //public float CarSpeed()
+    //{
+    //    float speed = _rigidbody.velocity.magnitude * 2.23693629f;
+    //    return speed;
+    //}
+
     public float CarSpeed()
     {
-        float speed = _rigidbody.velocity.magnitude * 2.23693629f;
-        return speed;
+        if (_rigidbody == null) return 0f;
+
+        Vector3 v = _rigidbody.velocity;
+
+        if (float.IsNaN(v.x) || float.IsInfinity(v.x) ||
+            float.IsNaN(v.y) || float.IsInfinity(v.y) ||
+            float.IsNaN(v.z) || float.IsInfinity(v.z))
+        {
+            return 0f;
+        }
+
+        return v.magnitude * 2.23693629f;
     }
 
     //private void OnCollisionEnter(Collision collision)
