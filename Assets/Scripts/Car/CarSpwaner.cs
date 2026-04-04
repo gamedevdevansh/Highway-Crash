@@ -31,6 +31,7 @@ public class CarSpwaner : MonoBehaviour
 
         carController.SetUiManager(uiManager);
         cameraMovement.SetTransform(carController.transform);
+        cameraMovement.SetCarController(carController);
         uiManager.SetCarController(carController);
         cityArray[0].SetTransform(carController.transform);
         cityArray[1].SetTransform(carController.transform);
