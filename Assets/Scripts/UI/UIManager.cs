@@ -42,9 +42,15 @@ public class UIManager : MonoBehaviour
         speedIcon.SetActive(true);
         distanceIcon.SetActive(true);
         scoreIcon.SetActive(true);
-        gas.SetActive(true);
-        brake.SetActive(true);
-        steering.SetActive(true);
+        
+        //gas.SetActive(true);
+        //brake.SetActive(true);
+        //steering.SetActive(true);
+
+        gas.SetActive(false);
+        brake.SetActive(false);
+        steering.SetActive(false);
+
         coinText.gameObject.SetActive(true);
         powerUpText.gameObject.SetActive(true);
     }

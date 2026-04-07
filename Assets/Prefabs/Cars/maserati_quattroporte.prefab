@@ -14316,7 +14316,7 @@ MonoBehaviour:
   rearLeftWheelTransform: {fileID: 2223744125290997686}
   carCentreOfMassTransform: {fileID: 6556658989889142878}
   _rigidbody: {fileID: 4737251328554968675}
-  torque: 700
+  torque: 250
   brakeForce: 1300
   steeringAngle: 20
   GasInput: 0

@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Download\\Unity\\My project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|d:\\download\\unity\\my project\\assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\camera\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\powerups\\powerupspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\powerupspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\car\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\car\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\powerups\\powerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\powerup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\car\\carspwaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\car\\carspwaner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\coinpool\\coinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinpool\\coinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\manager\\trafficmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\trafficmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\track\\lanemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\track\\lanemovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\coinpool\\coinpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinpool\\coinpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\powerups\\poweruppool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\poweruppool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\track\\endlesscity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\track\\endlesscity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\track\\trafficvehicleai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\track\\trafficvehicleai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\manager\\trafficpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\trafficpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CameraMovement.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Camera\\CameraMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\CameraMovement.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Camera\\CameraMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Camera\\CameraMovement.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T15:32:54.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\Coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CoinPool\\Coin.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\Coin.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CoinPool\\Coin.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T17:10:18.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CoinSpawner.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\CoinSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CoinPool\\CoinSpawner.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\CoinSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CoinPool\\CoinSpawner.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCcAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T16:48:13.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CoinPool.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\CoinPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CoinPool\\CoinPool.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\CoinPool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CoinPool\\CoinPool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T16:45:31.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PowerUp.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUp.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\PowerUp.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUp.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PowerUps\\PowerUp.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wBoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:49:47.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PowerUpSpawner.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:46:46.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PowerUpPool.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUpPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\PowerUpPool.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUpPool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PowerUps\\PowerUpPool.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T16:45:09.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EndlessCity.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\EndlessCity.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Track\\EndlessCity.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\EndlessCity.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Track\\EndlessCity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T12:19:13.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\UI\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIManager.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAWwC8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T16:08:48.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TrafficPool.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Manager\\TrafficPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\TrafficPool.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Manager\\TrafficPool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\TrafficPool.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAhwCsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T10:28:22.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TrafficVehicleAI.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\TrafficVehicleAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Track\\TrafficVehicleAI.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\TrafficVehicleAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Track\\TrafficVehicleAI.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T05:57:28.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CarSpwaner.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Car\\CarSpwaner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Car\\CarSpwaner.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Car\\CarSpwaner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Car\\CarSpwaner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T05:46:55.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TrafficManager.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Manager\\TrafficManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\TrafficManager.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Manager\\TrafficManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\TrafficManager.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T05:38:26.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LaneMovement.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\LaneMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Track\\LaneMovement.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Track\\LaneMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Track\\LaneMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T05:35:30.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Car\\CarController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Car\\CarController.cs",
+              "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Car\\CarController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Car\\CarController.cs",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAEwBwBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T13:27:06.598Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

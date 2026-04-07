@@ -9887,8 +9887,8 @@ MonoBehaviour:
   - {fileID: 488312050}
   coinPool: {fileID: 1386479313}
   carController: {fileID: 0}
-  spawnDistance: 200
-  spawnInterval: 5
+  spawnDistance: 250
+  spawnInterval: 3
 --- !u!1 &694023512
 GameObject:
   m_ObjectHideFlags: 0
@@ -14667,8 +14667,8 @@ MonoBehaviour:
   - {fileID: 488312050}
   powerUpPool: {fileID: 1949774866}
   carController: {fileID: 0}
-  spawnDistance: 200
-  spawnInterval: 10
+  spawnDistance: 300
+  spawnInterval: 5
 --- !u!4 &968837888
 Transform:
   m_ObjectHideFlags: 0
@@ -23444,7 +23444,7 @@ MonoBehaviour:
   - {fileID: 1769432998}
   minSpawnTime: 0.5
   maxSpawnTime: 3
-  laneCooldown: 1.5
+  laneCooldown: 3
   trafficPool: {fileID: 878822062}
   carController: {fileID: 0}
 --- !u!1 &1504801272
@@ -32174,7 +32174,7 @@ MonoBehaviour:
   - {fileID: 1025982665141112781, guid: 3ffa55507e50fa4409d5793193a60437, type: 3}
   - {fileID: 1525296600493129628, guid: fd2268b8fb7bc66459ee57c8d04f549d, type: 3}
   - {fileID: 6840221417520083047, guid: b5aa6bd3566c4c04c8a18437b700790d, type: 3}
-  poolSize: 1
+  poolSize: 3
 --- !u!4 &1949774867
 Transform:
   m_ObjectHideFlags: 0
@@ -45096,13 +45096,13 @@ SceneRoots:
   - {fileID: 1685762342}
   - {fileID: 1322721940}
   - {fileID: 1928923774}
-  - {fileID: 1492377154}
   - {fileID: 410883713}
   - {fileID: 1295519652}
   - {fileID: 1490574043}
   - {fileID: 1771291568}
   - {fileID: 1330333584}
   - {fileID: 285335792}
+  - {fileID: 1492377154}
   - {fileID: 878822063}
   - {fileID: 461484404}
   - {fileID: 62860737}
