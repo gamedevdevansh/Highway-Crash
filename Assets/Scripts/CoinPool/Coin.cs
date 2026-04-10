@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
     [SerializeField] float collectDistance = 1.5f;
 
     private bool isCollected = false;
-
+    private CoinSpawner spawner;
     void OnEnable()
     {
         isCollected = false;

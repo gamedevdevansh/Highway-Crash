@@ -18,13 +18,25 @@ public class TrafficManager : MonoBehaviour
     [SerializeField] private TrafficPool trafficPool;
     [SerializeField] private CarController carController;
 
-    private Dictionary<Transform, float> laneLastSpawnTime = new Dictionary<Transform, float>();
+    //private Dictionary<Transform, float> laneLastSpawnTime = new Dictionary<Transform, float>();
+
+    float[] laneTimers;
+    Transform[] allLanes;
+    bool isRunning = true;
 
     private float dynamicTimer;
 
     void Start()
     {
         carController = GameManager.Instance.CarController;
+
+        allLanes = new Transform[forwardLanes.Length + oppositeLanes.Length];
+
+        forwardLanes.CopyTo(allLanes, 0);
+        oppositeLanes.CopyTo(allLanes, forwardLanes.Length);
+
+        laneTimers = new float[allLanes.Length];
+
         StartCoroutine(TrafficSpawner());
     }
     public void SetCarController(CarController controller)
@@ -32,50 +44,118 @@ public class TrafficManager : MonoBehaviour
         carController = controller;
     }
 
-
     IEnumerator TrafficSpawner()
     {
         yield return new WaitForSeconds(2f);
 
-        while (true)
+        while (isRunning)
         {
-            if (carController != null && carController.CarSpeed() > 20f)
+            float speed = carController != null ? carController.CarSpeed() : 0f;
+
+            if (speed > 20f)
             {
-                dynamicTimer = Mathf.Lerp(maxSpawnTime, minSpawnTime, carController.CarSpeed() / 100f);
+                dynamicTimer = Mathf.Lerp(maxSpawnTime, minSpawnTime, speed / 100f);
                 SpawnTrafficVehicle();
             }
             else
             {
                 dynamicTimer = maxSpawnTime;
             }
+
             yield return new WaitForSeconds(dynamicTimer);
         }
     }
+    //IEnumerator TrafficSpawner()
+    //{
+    //    yield return new WaitForSeconds(2f);
+
+    //    while (isRunning)
+    //    {
+    //        if (carController != null && speed > 20f)
+    //        {
+    //            dynamicTimer = Mathf.Lerp(maxSpawnTime, minSpawnTime, speed / 100f);
+    //            SpawnTrafficVehicle();
+    //        }
+    //        else
+    //        {
+    //            dynamicTimer = maxSpawnTime;
+    //        }
+    //        yield return new WaitForSeconds(dynamicTimer);
+    //    }
+    //}
+
+    //void SpawnTrafficVehicle()
+    //{
+    //    bool spawnOpposite = Random.value > 0.5f;
+    //    Transform[] spawnLanes = spawnOpposite ? oppositeLanes : forwardLanes;
+
+    //    // Pick one lane
+    //    int randomLaneIndex = Random.Range(0, spawnLanes.Length);
+    //    Transform lane = spawnLanes[randomLaneIndex];
+
+    //    // Prevent fast respawn in same lane
+    //    if (laneLastSpawnTime.ContainsKey(lane))
+    //    {
+    //        if (Time.time - laneLastSpawnTime[lane] < laneCooldown)
+    //            return;
+    //    }
+
+    //    // Update last spawn time
+    //    laneLastSpawnTime[lane] = Time.time;
+
+    //    GameObject vehicle = trafficPool.GetVehicle();
+    //    if (vehicle == null) return; // Safety check if pool is empty
+
+    //    // Set Position
+    //    //vehicle.transform.position = lane.position;
+
+    //    float spawnDistance = 120f;
+
+    //    Vector3 spawnPos = lane.position;
+    //    spawnPos.z = carController.transform.position.z + spawnDistance;
+
+    //    vehicle.transform.position = spawnPos;
+
+    //    // 👇 THE FIX: Force the correct rotation here
+    //    if (spawnOpposite)
+    //    {
+    //        // Rotate 180 degrees around the Y axis so headlights face the player
+    //        vehicle.transform.rotation = Quaternion.Euler(0, 180, 0);
+    //    }
+    //    else
+    //    {
+    //        // Face the exact same way as the player
+    //        vehicle.transform.rotation = Quaternion.Euler(0, 0, 0);
+    //    }
+
+    //    vehicle.SetActive(true);
+
+    //    TrafficVehicleAI ai = vehicle.GetComponent<TrafficVehicleAI>();
+    //    if (ai != null)
+    //    {
+    //        // 👇 ALWAYS pass 1! Because we rotated the car 180 degrees above, 
+    //        // "driving forward" will automatically mean "driving towards the player".
+    //        ai.SetDirection(1);
+    //    }
+    //}
 
     void SpawnTrafficVehicle()
     {
         bool spawnOpposite = Random.value > 0.5f;
         Transform[] spawnLanes = spawnOpposite ? oppositeLanes : forwardLanes;
 
-        // Pick one lane
         int randomLaneIndex = Random.Range(0, spawnLanes.Length);
         Transform lane = spawnLanes[randomLaneIndex];
 
-        // Prevent fast respawn in same lane
-        if (laneLastSpawnTime.ContainsKey(lane))
-        {
-            if (Time.time - laneLastSpawnTime[lane] < laneCooldown)
-                return;
-        }
+        int laneIndex = System.Array.IndexOf(allLanes, lane);
 
-        // Update last spawn time
-        laneLastSpawnTime[lane] = Time.time;
+        if (Time.time - laneTimers[laneIndex] < laneCooldown)
+            return;
+
+        laneTimers[laneIndex] = Time.time;
 
         GameObject vehicle = trafficPool.GetVehicle();
-        if (vehicle == null) return; // Safety check if pool is empty
-
-        // Set Position
-        //vehicle.transform.position = lane.position;
+        if (vehicle == null) return;
 
         float spawnDistance = 120f;
 
@@ -84,26 +164,13 @@ public class TrafficManager : MonoBehaviour
 
         vehicle.transform.position = spawnPos;
 
-        // 👇 THE FIX: Force the correct rotation here
-        if (spawnOpposite)
-        {
-            // Rotate 180 degrees around the Y axis so headlights face the player
-            vehicle.transform.rotation = Quaternion.Euler(0, 180, 0);
-        }
-        else
-        {
-            // Face the exact same way as the player
-            vehicle.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+        vehicle.transform.rotation = spawnOpposite
+            ? Quaternion.Euler(0, 180, 0)
+            : Quaternion.identity;
 
         vehicle.SetActive(true);
 
-        TrafficVehicleAI ai = vehicle.GetComponent<TrafficVehicleAI>();
-        if (ai != null)
-        {
-            // 👇 ALWAYS pass 1! Because we rotated the car 180 degrees above, 
-            // "driving forward" will automatically mean "driving towards the player".
-            ai.SetDirection(1);
-        }
+        vehicle.TryGetComponent(out TrafficVehicleAI ai);
+        ai?.SetDirection(1);
     }
 }

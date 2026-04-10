@@ -13,6 +13,7 @@ public class TrafficVehicleAI : MonoBehaviour
 
     private Transform playerTransform;
     private Rigidbody rb;
+    private TrafficPool trafficPool;
 
     void Awake()
     {
