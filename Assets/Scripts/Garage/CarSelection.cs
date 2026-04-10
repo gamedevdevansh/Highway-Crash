@@ -7,6 +7,7 @@ public class CarSelection : MonoBehaviour
 {
     [SerializeField] GameObject[] cars;
     int currentCarIndex = 0;
+    int lastIndex = -1;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,12 +33,21 @@ public class CarSelection : MonoBehaviour
         ShowCar(currentCarIndex);
     }
 
+    //void ShowCar(int index)
+    //{
+    //    for (int i = 0; i < cars.Length; i++)
+    //    {
+    //        cars[i].SetActive(i == index);
+    //    }
+    //}
+
     void ShowCar(int index)
     {
-        for (int i = 0; i < cars.Length; i++)
-        {
-            cars[i].SetActive(i == index);
-        }
+        if (lastIndex != -1)
+            cars[lastIndex].SetActive(false);
+
+        cars[index].SetActive(true);
+        lastIndex = index;
     }
     public void SelectCar()
     {

@@ -31,12 +31,13 @@ public class Coin : MonoBehaviour
     //    }
     //}
 
-    public void Init(Transform playerRef, CarController carCtrl, UIManager ui, CoinPool poolRef)
+    public void Init(Transform playerRef, CarController carCtrl, UIManager ui, CoinPool poolRef, CoinSpawner spawnerRef)
     {
         player = playerRef;
         carController = carCtrl;
         uiManager = ui;
         pool = poolRef;
+        spawner = spawnerRef;
     }
 
     void Update()
@@ -73,6 +74,7 @@ public class Coin : MonoBehaviour
         }
 
         //gameObject.SetActive(false);
+        spawner?.ReturnCoin();   // 🔥 FIX COUNT
         pool.ReturnCoin(gameObject);
     }
 

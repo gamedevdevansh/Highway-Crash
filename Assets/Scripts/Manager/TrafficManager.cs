@@ -24,6 +24,7 @@ public class TrafficManager : MonoBehaviour
 
     void Start()
     {
+        carController = GameManager.Instance.CarController;
         StartCoroutine(TrafficSpawner());
     }
     public void SetCarController(CarController controller)

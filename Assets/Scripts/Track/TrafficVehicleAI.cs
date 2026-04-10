@@ -77,4 +77,9 @@ public class TrafficVehicleAI : MonoBehaviour
             }
         }
     }
+
+    void DisableVehicle()
+    {
+        trafficPool.ReturnVehicle(gameObject);
+    }
 }

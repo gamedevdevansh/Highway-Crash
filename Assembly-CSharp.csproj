@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Manager\SceneSwitcher.cs" />
     <Compile Include="Assets\Scripts\Car\CarController.cs" />
     <Compile Include="Assets\Scripts\Car\CarSounds.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\TrafficPool.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />

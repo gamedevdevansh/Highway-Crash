@@ -22,6 +22,8 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         currentDistance = minDistance;
+        playerCarTransform = GameManager.Instance.PlayerTransform;
+        carController = GameManager.Instance.CarController;
     }
 
     private Vector3 moveVelocity;

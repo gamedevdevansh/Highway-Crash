@@ -264,7 +264,9 @@ public class CarController : MonoBehaviour
         // 🚀 FORCE SPEED BOOST
         velocity *= 1.5f;
 
-        Debug.Log("SpeedBoost Activated");
+        #if UNITY_EDITOR
+           Debug.Log("SpeedBoost Activated");
+        #endif
 
         yield return new WaitForSeconds(boostDuration);
 
@@ -278,7 +280,9 @@ public class CarController : MonoBehaviour
     public void ActivateShield()
     {
         isShieldActive = true;
-        Debug.Log("Shield Activated");
+        #if UNITY_EDITOR
+                Debug.Log("Shield Activated");
+        #endif
         uiManager.ShowPowerUp("Shield", 5f);
     }
     private void OnCollisionEnter(Collision collision)

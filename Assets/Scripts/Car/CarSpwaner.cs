@@ -24,9 +24,12 @@ public class CarSpwaner : MonoBehaviour
     {
         int currentCarIndex = PlayerPrefs.GetInt("CarIndexValue", 0);
         GameObject newCar = Instantiate(carsPrefab[currentCarIndex], transform.position, transform.rotation);
-        CarController carController = newCar.GetComponent<CarController>();
+        
+        //CarController carController = newCar.GetComponent<CarController>();
+        //Rigidbody rb = newCar.GetComponent<Rigidbody>();
 
-        Rigidbody rb = newCar.GetComponent<Rigidbody>();
+        var carController = newCar.GetComponent<CarController>();
+        var rb = newCar.GetComponent<Rigidbody>();
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.WakeUp();
@@ -36,15 +39,16 @@ public class CarSpwaner : MonoBehaviour
         cameraMovement.SetCarController(carController);
 
         carController.SetUiManager(uiManager);
-        cameraMovement.SetTransform(carController.transform);
+        //cameraMovement.SetTransform(carController.transform);
         //cameraMovement.SetCarController(carController);
         uiManager.SetCarController(carController);
         cityArray[0].SetTransform(carController.transform);
         cityArray[1].SetTransform(carController.transform);
-        trafficManager.SetCarController(carController);
-        laneMovement.SetTransform(carController.transform);
+        //trafficManager.SetCarController(carController);
+        //laneMovement.SetTransform(carController.transform);
+        //coinSpawner.SetCarController(carController);
         powerUpSpawner.SetCarController(carController);
-        coinSpawner.SetCarController(carController);
+        GameManager.Instance.RegisterCar(carController);
 
 
     }

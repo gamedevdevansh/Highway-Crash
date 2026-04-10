@@ -7,6 +7,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] float speed = 1f;
+    bool isSwitching = false;
 
     private void Awake()
     {
@@ -36,15 +37,22 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+
+    //public void SceneSwitch(string sceneName)
+    //{
+    //    StartCoroutine(FadeOut(sceneName));
+    //}
+
     public void SceneSwitch(string sceneName)
     {
+        if (isSwitching) return;
+        isSwitching = true;
         StartCoroutine(FadeOut(sceneName));
-
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit");
+        //Debug.Log("Quit");
         Application.Quit();
     }
 }

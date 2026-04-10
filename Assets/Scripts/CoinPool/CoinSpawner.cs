@@ -4,20 +4,27 @@ public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] Transform[] lanes;
     [SerializeField] CoinPool coinPool;
-    [SerializeField] CarController carController;
+    [SerializeField] UIManager uiManager;
+    //[SerializeField] CarController carController;
 
     [SerializeField] float spawnDistance = 100f;
     [SerializeField] float spawnInterval = 2f;
-
     [SerializeField] int maxCoins = 50;
     int currentCoins = 0;
 
     float timer;
 
-    public void SetCarController(CarController controller)
+    CarController carController;
+
+    void Start()
     {
-        carController = controller;
+        carController = GameManager.Instance.CarController;
     }
+
+    //public void SetCarController(CarController controller)
+    //{
+    //    carController = controller;
+    //}
     void Update()
     {
         timer += Time.deltaTime;
@@ -28,24 +35,6 @@ public class CoinSpawner : MonoBehaviour
             timer = 0f;
         }
     }
-    //void SpawnCoins()
-    //{
-    //    int laneIndex = Random.Range(0, lanes.Length);
-    //    Transform lane = lanes[laneIndex];
-
-    //    for (int i = 0; i < 3; i++)
-    //    {
-    //        GameObject coin = coinPool.GetCoin();
-
-    //        Vector3 pos = lane.position;
-    //        pos.y = 0f;
-    //        //pos.z = carController.transform.position.z + 100f + (i * 3f);
-    //        pos.z = carController.transform.position.z + spawnDistance + (i * 3f);
-
-    //        coin.transform.position = pos;
-    //        coin.SetActive(true);
-    //    }
-    //}
 
     void SpawnCoins()
     {
@@ -65,10 +54,17 @@ public class CoinSpawner : MonoBehaviour
             coin.transform.position = pos;
 
             Coin coinScript = coin.GetComponent<Coin>();
-            coinScript.Init(carController.transform, carController, FindObjectOfType<UIManager>(), coinPool);
+            coinScript.Init(carController.transform, carController, uiManager, coinPool, this);
+            //coinScript.Init(carController.transform, carController, FindObjectOfType<UIManager>(), coinPool);
 
             coin.SetActive(true);
             currentCoins++;
         }
+    }
+
+    // 🔥 IMPORTANT: called when coin is collected
+    public void ReturnCoin()
+    {
+        currentCoins--;
     }
 }
