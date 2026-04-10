@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] CarController carController;
 
     [Header("Follow Settings")]
-    [SerializeField] float smoothSpeed = 5f;
+    //[SerializeField] float smoothSpeed = 5f;
     [SerializeField] Vector3 baseOffset = new Vector3(0f, 3f, -6f);
 
     [Header("Speed Zoom")]

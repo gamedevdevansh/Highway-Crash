@@ -15,7 +15,13 @@ public class FollowCar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    //void FixedUpdate()
+    //{
+    //    transform.LookAt(carTransform);
+    //    transform.position = Vector3.SmoothDamp(transform.position, cameraPointTransform.position, ref vector, 0.05f);
+    //}
+
+    void LateUpdate()
     {
         transform.LookAt(carTransform);
         transform.position = Vector3.SmoothDamp(transform.position, cameraPointTransform.position, ref vector, 0.05f);

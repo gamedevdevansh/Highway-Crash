@@ -41,6 +41,9 @@ public class CarController : MonoBehaviour
     public bool BrakeInput;
 
     float originalDrag;
+    int frameSkip = 0;
+    Vector3 velocity;
+
 
     [SerializeField] UIManager uiManager;
 
@@ -80,12 +83,17 @@ public class CarController : MonoBehaviour
         BrakeInput = false;
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        GetInput();
+    }
+
+
     void FixedUpdate()
-    {   
+    {
+        velocity = _rigidbody.velocity;
         MotorForce();
         UpdateWheels();
-        GetInput();
         Steering();
         ApplyingBrakes();
         //PowerSteering();
@@ -105,11 +113,13 @@ public class CarController : MonoBehaviour
 
         // SimpleInput for steering is usually fine, but ensure 
         // it's not being fought by standard Input.GetAxis
-        float touchHorizontal = SimpleInput.GetAxis("Horizontal");
-        float keyboardHorizontal = Input.GetAxis("Horizontal");
+        //float touchHorizontal = SimpleInput.GetAxis("Horizontal");
+        ////float keyboardHorizontal = Input.GetAxis("Horizontal");
 
-        // Use whichever input is providing a stronger signal
-        horizontalInput = Mathf.Abs(touchHorizontal) > 0.01f ? touchHorizontal : keyboardHorizontal;
+        //// Use whichever input is providing a stronger signal
+        //horizontalInput = Mathf.Abs(touchHorizontal) > 0.01f ? touchHorizontal : keyboardHorizontal;
+
+        horizontalInput = SimpleInput.GetAxis("Horizontal");
     }
     void MotorForce()
     {
@@ -128,7 +138,7 @@ public class CarController : MonoBehaviour
 
     void Steering()
     {
-        float speedFactor = Mathf.InverseLerp(0f, 100f, _rigidbody.velocity.magnitude * 2.236f);
+        float speedFactor = Mathf.InverseLerp(0f, 100f, velocity.magnitude * 2.236f);
         float steerReduce = Mathf.Lerp(1f, highSpeedSteerMultiplier, speedFactor);
 
         float steer = steeringAngle * steerReduce * horizontalInput;
@@ -148,6 +158,9 @@ public class CarController : MonoBehaviour
 
     void UpdateWheels()
     {
+        frameSkip++;
+        if (frameSkip % 2 != 0) return; // update every 2 frames
+
         RotateWheel(frontRightWheelCollider, frontRightWheelTransform);
         RotateWheel(frontLeftWheelCollider, frontLeftWheelTransform);
         RotateWheel(rearRightWheelCollider, rearRightWheelTransform);
@@ -195,7 +208,7 @@ public class CarController : MonoBehaviour
     {
         if (_rigidbody == null) return 0f;
 
-        Vector3 v = _rigidbody.velocity;
+        Vector3 v = velocity;
 
         if (float.IsNaN(v.x) || float.IsInfinity(v.x) ||
             float.IsNaN(v.y) || float.IsInfinity(v.y) ||
@@ -249,7 +262,7 @@ public class CarController : MonoBehaviour
 
 
         // 🚀 FORCE SPEED BOOST
-        _rigidbody.velocity *= 1.5f;
+        velocity *= 1.5f;
 
         Debug.Log("SpeedBoost Activated");
 

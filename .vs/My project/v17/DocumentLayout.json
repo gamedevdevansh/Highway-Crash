@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Download\\Unity\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|d:\\download\\unity\\my project\\assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\powerups\\powerupspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\powerupspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinpool\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|D:\\Download\\Unity\\My project\\assets\\scripts\\car\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,11 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CameraMovement.cs",
               "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\Camera\\CameraMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\CameraMovement.cs",
@@ -86,15 +86,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Coin.cs",
               "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\Coin.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CoinPool\\Coin.cs",
               "ToolTip": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\CoinPool\\Coin.cs",
               "RelativeToolTip": "Assets\\Scripts\\CoinPool\\Coin.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAApwDoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T17:10:18.622Z"
+              "WhenOpened": "2026-04-02T17:10:18.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -134,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PowerUpSpawner.cs",
               "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\PowerUpSpawner.cs",
@@ -170,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UIManager.cs",
               "DocumentMoniker": "D:\\Download\\Unity\\My project\\Assets\\Scripts\\UI\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
