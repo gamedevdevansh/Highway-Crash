@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] Transform[] lanes;
     [SerializeField] CoinPool coinPool;
     [SerializeField] UIManager uiManager;
-    //[SerializeField] CarController carController;
+    [SerializeField] CarController carController;
 
     [SerializeField] float spawnDistance = 100f;
     [SerializeField] float spawnInterval = 2f;
@@ -14,19 +16,44 @@ public class CoinSpawner : MonoBehaviour
 
     float timer;
 
-    CarController carController;
+    //CarController carController;
 
-    void Start()
-    {
-        carController = GameManager.Instance.CarController;
-    }
+    //void Start()
+    //{
+    //    carController = GameManager.Instance.CarController;
+    //}
+
+    //IEnumerator Start()
+    //{
+    //    ////yield return new WaitUntil(() => GameManager.Instance.CarController != null);
+    //    //yield return new WaitUntil(() =>
+    //    //    GameManager.Instance != null &&
+    //    //    GameManager.Instance.CarController != null
+    //    //);
+    //    //carController = GameManager.Instance.CarController;
+    //    ////StartCoroutine(SpawnCoins());
+    //}
 
     //public void SetCarController(CarController controller)
     //{
     //    carController = controller;
     //}
+
+    public void SetCarController(CarController controller)
+    {
+        carController = controller;
+
+        if (carController == null)
+        {
+            Debug.LogError("CoinSpawner: CarController is NULL");
+            return;
+        }
+
+        SpawnCoins();
+    }
     void Update()
     {
+        if (carController == null) return;
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)

@@ -40,6 +40,11 @@ public class TrafficVehicleAI : MonoBehaviour
         }
     }
 
+    public void Init(TrafficPool pool)
+    {
+        trafficPool = pool;
+    }
+
     public void SetDirection(float dir)
     {
         direction = dir;
@@ -53,7 +58,9 @@ public class TrafficVehicleAI : MonoBehaviour
         // 👇 ENDLESS SYSTEM FIX: If the road chunk teleports and the car falls, recycle it instantly.
         if (transform.position.y < -5f)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            DisableVehicle();
+
             return;
         }
 
@@ -66,7 +73,9 @@ public class TrafficVehicleAI : MonoBehaviour
             // If car is too far behind OR too far ahead
             if (zDifference < -despawnDistanceBehind || zDifference > despawnDistanceAhead)
             {
-                gameObject.SetActive(false); // Return to pool!
+                //gameObject.SetActive(false); // Return to pool!
+                DisableVehicle();
+
             }
         }
         else
@@ -74,7 +83,8 @@ public class TrafficVehicleAI : MonoBehaviour
             // Failsafe
             if (transform.position.z < -100f)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
+                DisableVehicle();
             }
         }
     }

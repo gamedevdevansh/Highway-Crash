@@ -20,14 +20,15 @@ public class TrafficManager : MonoBehaviour
 
     //private Dictionary<Transform, float> laneLastSpawnTime = new Dictionary<Transform, float>();
 
-    float[] laneTimers;
-    Transform[] allLanes;
+    private float[] laneTimers;
+    private Transform[] allLanes;
     bool isRunning = true;
 
     private float dynamicTimer;
 
-    void Start()
+    IEnumerator Start()
     {
+        yield return new WaitUntil(() => GameManager.Instance.CarController != null);
         carController = GameManager.Instance.CarController;
 
         allLanes = new Transform[forwardLanes.Length + oppositeLanes.Length];
@@ -155,7 +156,13 @@ public class TrafficManager : MonoBehaviour
         laneTimers[laneIndex] = Time.time;
 
         GameObject vehicle = trafficPool.GetVehicle();
-        if (vehicle == null) return;
+        //if (vehicle == null) return;
+
+        if (vehicle == null)
+        {
+            Debug.Log("Vehicle pool empty!");
+            return;
+        }
 
         float spawnDistance = 120f;
 
@@ -170,7 +177,15 @@ public class TrafficManager : MonoBehaviour
 
         vehicle.SetActive(true);
 
+        //vehicle.TryGetComponent(out TrafficVehicleAI ai);
         vehicle.TryGetComponent(out TrafficVehicleAI ai);
+        if (ai != null)
+        {
+            ai.Init(trafficPool);
+            ai.SetDirection(1);
+        }
         ai?.SetDirection(1);
+
+        Debug.Log("Spawning traffic...");
     }
 }
